@@ -1,0 +1,10 @@
+workflows, jobs, steps 
+workflows => attached to a github repo. 
+            contain one or more Jobs 
+            Triggered upon Events 
+Jobs => Define a Runner (execution env)
+        contain one or more steps
+        Run in parallel by defaul or sequential 
+        can be conditional 
+Steps => scripts that perform an action /can be custom or thirdparty
+         can be conditional 

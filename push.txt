@@ -8,3 +8,13 @@ Jobs => Define a Runner (execution env)
         can be conditional 
 Steps => scripts that perform an action /can be custom or thirdparty
          can be conditional 
+Respository related events: Push =>pushing a commit 
+                            pull_request 
+                            create
+                            fork
+                            watch 
+                            discussion
+                            issue_comment
+
+Action: custom or third application that perfoms a frequently reapeated task 
+        alternative command run 

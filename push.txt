@@ -7,7 +7,7 @@ Jobs => Define a Runner (execution env)
         Run in parallel by defaul or sequential 
         can be conditional 
 Steps => scripts that perform an action /can be custom or thirdparty
-         can be conditional 
+         can be conditional.... 
 Respository related events: Push =>pushing a commit 
                             pull_request 
                             create

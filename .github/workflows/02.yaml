@@ -41,6 +41,10 @@ jobs:
       needs: build #use [job1, job2, job3]
       runs-on: ubuntu-latest
       steps:
+        - name: Get build artifacts
+          uses: actions/download-artifact@v4
+          with: 
+            name: dist-files
         - name: Deploy 
           run: echo "Deploy..."
 

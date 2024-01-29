@@ -21,18 +21,26 @@ jobs:
             run: npm ci 
           - name: Run tests
             run: npm test
+    build:
+      needs: test
+      runs-on: ubunti-latest
+      steps:
+        - name: Get code
+          uses: actions/checkout@v4
+        - name: Install dependecies
+          run: npm ci
+        - name: Build the site
+          run: npm run build
+        - name: Upload artifacts
+          uses: actions/upload-artifact@v4
+          with: 
+            name: dist-files
+            path: |
+              dist
     deploy: 
       needs: test #use [job1, job2, job3]
       runs-on: ubuntu-latest
       steps:
-        - name: Get code
-          uses: actions/checkout@v4
-        - name: install Nodejs 
-          uses: actions/setup-node@v4
-          with:
-            node-version: 18
-        - name: install dependencies
-          run: npm ci 
         - name: Deploy 
           run: echo "Deploy..."
 
